@@ -137,7 +137,7 @@ public class CalcServiceImpl implements CalculatorService {
         boolean repeatApp = true;
         String repStr;
         System.out.println("");
-        System.out.println("                         <<<<<<<< Simple Calculator >>>>>>>>                           ");
+        System.out.println("                         <<<<<<<<  Calculator >>>>>>>>                           ");
         System.out.println("");
         System.out.println(" Digits, operations + , - , * , / and parentheses precedence ( ) are supported: ");
         while (repeatApp) {

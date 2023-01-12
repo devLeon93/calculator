@@ -7,8 +7,8 @@ package mycalculator;
 public class Main {
     public static void main(String[] args) {
 
-        CalcServiceImpl calc = new CalcServiceImpl();
+        CalcServiceImpl calcService = new CalcServiceImpl();
 
-        calc.startApp();
+        calcService.startApp();
     }
 }
