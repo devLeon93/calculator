@@ -11,9 +11,9 @@ import java.util.StringTokenizer;
 
 public class CalcServiceImpl implements CalculatorService {
     @Override
-    public String rpn(String inputStr){
+    public String rpn(String inputStr) {
         StringBuilder sbStack = new StringBuilder(""),
-                        sbOut = new StringBuilder("");
+                sbOut = new StringBuilder("");
         char cInp, cTmp;
 
         for (int i = 0; i < inputStr.length(); i++) {
@@ -80,7 +80,7 @@ public class CalcServiceImpl implements CalculatorService {
     }
 
     @Override
-    public double calculate(String inputStr){
+    public double calculate(String inputStr) {
         double num1, num2;
         String strTmp;
         Deque<Double> stack = new ArrayDeque<>();
@@ -102,7 +102,7 @@ public class CalcServiceImpl implements CalculatorService {
                             num1 -= num2;
                             break;
                         case '/':
-                            if(num2 == 0){
+                            if (num2 == 0) {
                                 num2 = 1;
                             }
                             num1 /= num2;
@@ -139,7 +139,7 @@ public class CalcServiceImpl implements CalculatorService {
         System.out.println("");
         System.out.println("                         <<<<<<<<  Calculator >>>>>>>>                           ");
         System.out.println("");
-        System.out.println(" Digits, operations + , - , * , / and parentheses precedence ( ) are supported: ");
+        System.out.println(" Operations: + , - , * , / and parentheses precedence ( ) are supported: ");
         while (repeatApp) {
             System.out.println("");
             System.out.println(" Enter an expression to calculate please ");
@@ -152,16 +152,15 @@ public class CalcServiceImpl implements CalculatorService {
             System.out.println("");
             System.out.println(" Do you want to start again ? ( If YES press + , IF NOT press - ) ");
             System.out.println("");
-            System.out.print(">>> ");
+            System.out.print(" >>> ");
             repStr = sc.nextLine();
 
             if (repStr.equals("+")) {
                 repeatApp = true;
-            }
-             else if (repStr.equals("-")) {
+            } else if (repStr.equals("-")) {
                 repeatApp = false;
                 System.out.println("");
-                System.out.println(" Goodbye! ");
+                System.out.println("              Goodbye!              ");
             }
         }
     }
