@@ -153,16 +153,14 @@ public class CalcServiceImpl implements CalculatorService {
             System.out.println(" Do you want to start again ? ( If YES press + , IF NOT press - ) ");
             System.out.println("");
             System.out.print(" >>> ");
+            repeatApp = false;
             repStr = sc.nextLine();
-
             if (repStr.equals("+")) {
                 repeatApp = true;
-            } else if (repStr.equals("-")) {
-                repeatApp = false;
-                System.out.println("");
-                System.out.println("              Goodbye!              ");
             }
         }
+        System.out.println("");
+        System.out.println("              Goodbye!              ");
     }
 }
 
